@@ -24,6 +24,13 @@ body {
     overflow: hidden;
 }
 
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 124.41%;
+    color: #000;
+}
+
 /* HEADER */
 
 .main-bg {
@@ -93,6 +100,7 @@ body {
 
 .promo {
     margin-top: 56px;
+    margin-bottom: 124px;
     padding-bottom: 227px;
     color: #fff;
 }
@@ -190,4 +198,58 @@ body {
     line-height: 20px;
     text-decoration: none;
     color: #2F80ED;
+}
+
+/* SPECIALISTS */
+
+.specialists {
+    padding-top: 92px;
+    padding-bottom: 170px;
+    margin-bottom: 130px;
+    position: relative;
+    background: url(../img/special-bg.svg) top right no-repeat;
+}
+
+.specialists::after{
+    position: absolute;
+    z-index: 0;
+    content: "";
+    right: 30px;
+    top: -24px;
+    width: 231px;
+    height: 231px;
+    background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
+    filter: blur(20px);
+    border-radius: 50%;
+}
+
+.specialists__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.specialists__title {
+    margin-bottom: 97px;
+}
+
+.specialists__list {
+    display: flex;
+    gap: 75px;
+}
+.specialists__item {
+    max-width: 225px;
+}
+.specialists__item-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143.55%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2F80ED;
+    margin-bottom: 10px;
+}
+.specialists__item-text {
+    font-size: 14px;
+    line-height: 143.55%;
 }
