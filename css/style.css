@@ -240,7 +240,8 @@ body {
 .specialists__item {
     max-width: 225px;
 }
-.specialists__item-title {
+.specialists__item-title,
+.programm__item-title {
     font-weight: 600;
     font-size: 14px;
     line-height: 143.55%;
@@ -249,7 +250,61 @@ body {
     color: #2F80ED;
     margin-bottom: 10px;
 }
-.specialists__item-text {
+.specialists__item-text,
+.programm__item-text {
     font-size: 14px;
     line-height: 143.55%;
 }
+
+/* PROGRAMM */
+
+.programm {
+    background: url(../img/programm-bg.png) top right no-repeat;
+    padding-bottom: 126px;
+    position: relative;
+}
+
+.programm__title {
+    margin-bottom: 45px;
+}
+
+.programm__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 530px;
+    margin-bottom: 107px;
+}
+
+.programm__item {
+    width: 228px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    border: 1px solid #2F80ED;
+}
+
+.programm__link {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143.55%;
+    text-transform: uppercase;
+    color: #2F80ED;
+    text-decoration: none;
+    position: relative;
+    /* border-bottom: 1px #2F80ED dashed; */
+}
+
+.programm__link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, #2F80ED 50%, transparent 50%);
+    background-size: 10px;
+}
+
