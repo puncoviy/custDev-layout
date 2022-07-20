@@ -374,3 +374,102 @@ body {
 .results__item:nth-of-type(4) .results__item-title::before {
     content: url(../img/result4.svg);
 }
+
+/* FEATURES */
+
+.features {
+    position: relative;
+    margin-bottom: 152px;
+}
+
+.features::after {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    top: 492px;
+    right: 69px;
+    width: 197px;
+    height: 197px;
+    background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
+    filter: blur(20px);
+    border-radius: 50%;
+}
+
+.features__title {
+    margin-bottom: 77px;
+}
+
+.features__video-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 92px;
+    margin-bottom: 81px;
+}
+
+.features__video-container {
+    max-width: 727px;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.features__video-player {
+    border-radius: 10px;
+}
+
+.features__video-container::before {
+    position: absolute;
+    content: url(../img/player.svg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: transform .7s;
+}
+
+.features__video-container:hover::before {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.features__video-info {
+    background: #FFFFFF;
+    box-shadow: 0px 30px 100px rgba(47, 55, 237, 0.1);
+    border-radius: 10px;
+    padding: 70px 67px;
+}
+
+.features__video-info-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 44px;
+    color: #2F80ED;
+}
+
+.features__video-info-text {
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.features__item {
+    width: 247px;
+}
+.features__item-img {
+    height: 61px;
+    margin-bottom: 33px;
+}
+.features__item-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 143.55%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #2F80ED;
+}
