@@ -1,3 +1,12 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #636363;
+}
+
 .container {
     max-width: 1200px;
     padding: 0 15px;
@@ -17,3 +26,71 @@
 
 /* HEADER */
 
+.main-bg {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: top center;
+
+}
+
+.header {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.header__inner,
+.header__city-list,
+.header__menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__city-list {
+    text-transform: uppercase;
+    font-weight: 400;
+    gap: 25px;
+    background: linear-gradient(-90deg, #2F80ED -50%, rgba(255, 255, 255, 0) 136.68%), #FFFFFF;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.header__city-link,
+.header__menu-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main {
+    font-weight: 700;
+    color: #2F80ED;
+    /* text-shadow: -1px 0 1px #fff, 1px 0 1px #fff, 0 1px 1px #fff,0 -1px 1px #fff; */
+}
+
+.header__menu-list {
+    gap: 40px;
+}
+
+.header__menu-link {
+    font-weight: 400;
+    transition: text-shadow .7s;
+}
+
+.header__menu-link:hover {
+    text-shadow: -0.5px 0 1px #fff, 0.5px 0 1px #fff;
+}
+
+.btn-white {
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #2F80ED;
+    background-color: #fff;
+    border-radius: 21px;
+}
+
+/* PROMO */
+
+.promo {
+    margin-top: 56px;
+}
