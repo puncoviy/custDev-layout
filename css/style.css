@@ -384,7 +384,7 @@ body {
 
 .features::after {
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     content: "";
     top: 492px;
     right: 69px;
@@ -472,4 +472,33 @@ body {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #2F80ED;
+}
+
+/* GALLERY */
+
+.gallery {
+    margin-bottom: 230px;
+}
+
+.gallery__title {
+    text-align: center;
+    margin-bottom: 74px;
+}
+
+.gallery__list {
+    max-width: 1439px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px 25px;
+}
+
+.gallery__item {
+    cursor: pointer;
+}
+
+.gallery__item-img {
+    width: 340px;
 }
