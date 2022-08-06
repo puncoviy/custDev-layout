@@ -89,11 +89,37 @@ body {
 }
 
 .btn-white {
+    position: relative;
+    z-index: 0;
     padding: 12px 25px;
     text-decoration: none;
     color: #2F80ED;
     background-color: #fff;
     border-radius: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color .7s;
+}
+
+.btn-white::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #64E2CD;
+    transition: width .5s;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.btn-white:hover {
+    color: #fff;
+}
+
+.btn-white:hover::before {
+    width: 100%;
 }
 
 /* PROMO */
@@ -202,6 +228,20 @@ body {
 
 /* SPECIALISTS */
 
+@keyframes pseudo {
+    0% {transform: translate(0%, 0%);}    
+    10% {transform: translate(-20%, -20%);}    
+    20% {transform: translate(-45%, -25%);}    
+    30% {transform: translate(-5%, -45%);}    
+    40% {transform: translate(-9%, 15%);}    
+    50% {transform: translate(10%, 10%);}    
+    60% {transform: translate(0%, 20%);}    
+    70% {transform: translate(-3%, 25%);}    
+    80% {transform: translate(28%, -35%);}    
+    90% {transform: translate(-20%, 17%);}    
+    100% {transform: translate(0%, 0%);}    
+}
+
 .specialists {
     padding-top: 92px;
     padding-bottom: 170px;
@@ -222,6 +262,7 @@ body {
     box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
     filter: blur(20px);
     border-radius: 50%;
+    animation: pseudo 20s ease-in infinite;
 }
 
 .specialists__inner {
@@ -394,6 +435,7 @@ body {
     box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
     filter: blur(20px);
     border-radius: 50%;
+    animation: pseudo 20s ease-in infinite;
 }
 
 .features__title {
@@ -530,11 +572,13 @@ body {
 .plan::before {
     top: 423px;
     left: 60px;
+    animation: pseudo 20s ease-in infinite;
 }
 
 .plan::after {
     top: -173px;
     right: 69px;
+    animation: pseudo 30s ease-in infinite;
 }
 
 .plan__title {
