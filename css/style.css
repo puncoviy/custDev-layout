@@ -459,6 +459,11 @@ body {
 
 .features__video-player {
     border-radius: 10px;
+    position: relative;
+    z-index: 0;
+    width: 727px;
+    height: 392px;
+    object-fit: cover;
 }
 
 .features__video-container::before {
