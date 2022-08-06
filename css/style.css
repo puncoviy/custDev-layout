@@ -502,3 +502,103 @@ body {
 .gallery__item-img {
     width: 340px;
 }
+
+/* PLAN */
+
+.plan {
+    position: relative;
+    padding-bottom: 121px;
+    margin-bottom: 126px;
+    background-image: url(../img/plan-decor.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.plan::before, 
+.plan::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 197px;
+    height: 197px;
+    background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
+    filter: blur(20px);
+    border-radius: 50%;
+}
+
+.plan::before {
+    top: 423px;
+    left: 60px;
+}
+
+.plan::after {
+    top: -173px;
+    right: 69px;
+}
+
+.plan__title {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.plan__list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.plan__item {
+    position: relative;
+    padding: 70px 15px 65px;
+    text-align: center;
+    width: 271px;
+    background-color: #fff;
+    box-shadow: 0px 20px 50px rgba(47, 55, 237, 0.12);
+    border-radius: 10px;
+    color: #2F80ED;
+}
+
+.plan__item.profit::before {
+    position: absolute;
+    z-index: 1;
+    top: -53px;
+    right: -23px;
+    width: 90px;
+    height: 90px;
+    padding-top: 38px;
+    background-color: #2F80ED;
+    content: 'ВЫГОДНО';
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 124.41%;
+    border-radius: 50%;
+}
+
+.plan__item-price {
+    display: block;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+.plan__item-team {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 158.47%;
+    margin-bottom: 33px;
+}
+.plan__item-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #52D1BC;
+    border-radius: 50px;
+}
