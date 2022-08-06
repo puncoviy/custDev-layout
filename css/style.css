@@ -93,7 +93,7 @@ body {
     text-decoration: none;
     color: #2F80ED;
     background-color: #fff;
-    border-radius: 21px;
+    border-radius: 50px;
 }
 
 /* PROMO */
@@ -601,4 +601,56 @@ body {
     color: #fff;
     background-color: #52D1BC;
     border-radius: 50px;
+}
+
+/* FOOTER */
+
+.footer__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.light-box {
+    padding: 41px 0;
+    background-color: #2F80ED;
+}
+
+.footer__city-list {
+    display: flex;
+    gap: 27px;
+}
+
+.footer__city-item-link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 119.62%;
+}
+
+.footer__city-item-link.active {
+    font-weight: 700;
+}
+
+.dark-box {
+    padding: 30px 0;
+    background-color: #185FBF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 119.62%;
+    color: #fff;
+}
+
+.footer__copyright {
+    opacity: 0.7;
+    margin-right: auto;
+}
+
+.footer__copyright-link {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.7;
 }
