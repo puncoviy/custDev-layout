@@ -1,3 +1,7 @@
+let scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 300
+});
+
 const burgerBtn = document.querySelector('.burger-box');
 const burgerIcon = document.querySelector('.burger-menu');
 const menuList = document.querySelector('.header__menu-list');
@@ -5,6 +9,7 @@ const menuList = document.querySelector('.header__menu-list');
 const cityBtn = document.querySelector('.header__city-icon');
 const cityList = document.querySelector('.header__city-list');
 const cityLink = document.querySelectorAll('.header__city-link');
+const footerCityLink = document.querySelectorAll('.footer__city-item-link');
 
 const meetup = document.querySelector('.promo__subtitle');
 
@@ -46,6 +51,18 @@ cityLink.forEach(function(link){
 	})
 })
 
+footerCityLink.forEach(function(link){
+	link.addEventListener('click', function(e) {
+        e.preventDefault();
+		footerCityLink.forEach(function(link) {
+			link.classList.remove('active')
+		});
+		link.classList.add('active');
+        meetup.textContent = link.textContent + ' 10-21 мая';
+        document.title = 'CustDev | ' + link.textContent;
+	})
+})
+
 videoBox.addEventListener('click', function(){
     video.style.zIndex = 2;
     video.play();
@@ -59,4 +76,5 @@ console.log(`Выполнено:
 
 Дополнить:
 закрытие меню при клике за его пределами без создания дополнительной оболочки;
-смена текста отзывов;`)
+смена текста отзывов;
+связь нижнего блока городов с верхним`)
